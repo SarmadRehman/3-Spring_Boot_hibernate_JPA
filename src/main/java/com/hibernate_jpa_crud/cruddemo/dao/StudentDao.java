@@ -18,4 +18,6 @@ public interface StudentDao {
     Student findById(int theId);
 
     void update(Student theStudent);
+
+    void delete(Integer id);
 }
