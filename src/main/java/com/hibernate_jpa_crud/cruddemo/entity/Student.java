@@ -21,6 +21,11 @@ public class Student {
     @Column(name = "email")
     private String email;
 
+
+    // define constructors
+    public Student() {
+
+    }
     //getters and setters
     public int getId() {
         return id;
@@ -64,7 +69,8 @@ public class Student {
                 '}';
     }
 
-    // as id is auto-generated for uniqueness
+
+    // not the id, as id is auto-generated for uniqueness
     public Student(String firstname, String lastname, String email) {
         this.firstname = firstname;
         this.lastname = lastname;
