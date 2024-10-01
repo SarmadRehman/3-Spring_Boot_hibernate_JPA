@@ -28,7 +28,7 @@ public class CruddemoApplication {
 
 			//queryForStudents(studentDao);
 
-			//queryForStudentsByLastName(studentDao);
+			queryForStudentsByLastName(studentDao);
 
 		};
 	}
@@ -36,7 +36,7 @@ public class CruddemoApplication {
 	private void queryForStudentsByLastName(StudentDao studentDao) {
 
 		// get a list of students
-		List<Student> theStudents = studentDao.findByLastName("Rehman");
+		List<Student> theStudents = studentDao.findByLastName(	"Rehman");
 		// display a list of students
 		for(Student  tempStudent : theStudents ) {
 			System.out.println(tempStudent);
