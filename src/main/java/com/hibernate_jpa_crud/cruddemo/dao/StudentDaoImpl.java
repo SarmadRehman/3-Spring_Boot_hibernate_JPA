@@ -31,6 +31,13 @@ public class StudentDaoImpl implements StudentDao{
     public Student findById(int theId) {
         return entityManager.find(Student.class, theId);
     }
+
+    @Override
+    @Transactional
+    public void update(Student theStudent) {
+        entityManager.merge(theStudent);
+    }
+
     @Override
     public List<Student> findAll() {
         // create query
